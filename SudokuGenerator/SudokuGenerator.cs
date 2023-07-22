@@ -3,8 +3,10 @@ using System.Collections.Generic;
 
 namespace Sudoku
 {
-    public class SudokuCommon
+    public static class SudokuCommon
     {
+        public static Random Random = new Random();
+
         public static bool IsValid(int num, int row, int col, int[,] sudokuArray)
         {
             int startRow = row / 3 * 3;
@@ -56,7 +58,6 @@ namespace Sudoku
 
     public static class SudokuGenerator
     {
-        private static Random _random = new Random();
         private static List<int> _validRowList = new List<int>();
         private static List<int> _validColList = new List<int>();
         private static List<int[,]> _solutionList = new List<int[,]>();
@@ -87,7 +88,7 @@ namespace Sudoku
 
             while (randomNumList.Count > 0)
             {
-                int randomNum = randomNumList[_random.Next(randomNumList.Count)];
+                int randomNum = randomNumList[SudokuCommon.Random.Next(randomNumList.Count)];
                 randomNumList.Remove(randomNum);
 
                 if (IsValid(randomNum, row, col))
@@ -128,7 +129,7 @@ namespace Sudoku
 
             while (randomNumList.Count > 0)
             {
-                int randomNum = randomNumList[_random.Next(randomNumList.Count)];
+                int randomNum = randomNumList[SudokuCommon.Random.Next(randomNumList.Count)];
                 randomNumList.Remove(randomNum);
 
                 if (SudokuCommon.IsValid(randomNum, row, col, sudokuArray))
@@ -186,14 +187,14 @@ namespace Sudoku
 
             for (int i = emptyCount; i < targetCount; i++)
             {
-                int randomRow = _random.Next(0, 9);
-                int randomCol = _random.Next(0, 9);
+                int randomRow = SudokuCommon.Random.Next(0, 9);
+                int randomCol = SudokuCommon.Random.Next(0, 9);
                 int cacheNum;
 
                 while (sudokuArray[randomRow, randomCol] == 0)
                 {
-                    randomRow = _random.Next(0, 9);
-                    randomCol = _random.Next(0, 9);
+                    randomRow = SudokuCommon.Random.Next(0, 9);
+                    randomCol = SudokuCommon.Random.Next(0, 9);
                 }
 
                 cacheNum = sudokuArray[randomRow, randomCol];
