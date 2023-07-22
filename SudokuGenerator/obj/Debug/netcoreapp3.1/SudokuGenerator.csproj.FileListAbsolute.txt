@@ -1,0 +1,14 @@
+C:\Users\ChiehYunMyBaby\Documents\Visual Studio 2019\Sudoku\Sudoku\SudokuGenerator\bin\Debug\netcoreapp3.1\SudokuGenerator.exe
+C:\Users\ChiehYunMyBaby\Documents\Visual Studio 2019\Sudoku\Sudoku\SudokuGenerator\bin\Debug\netcoreapp3.1\SudokuGenerator.deps.json
+C:\Users\ChiehYunMyBaby\Documents\Visual Studio 2019\Sudoku\Sudoku\SudokuGenerator\bin\Debug\netcoreapp3.1\SudokuGenerator.runtimeconfig.json
+C:\Users\ChiehYunMyBaby\Documents\Visual Studio 2019\Sudoku\Sudoku\SudokuGenerator\bin\Debug\netcoreapp3.1\SudokuGenerator.runtimeconfig.dev.json
+C:\Users\ChiehYunMyBaby\Documents\Visual Studio 2019\Sudoku\Sudoku\SudokuGenerator\bin\Debug\netcoreapp3.1\SudokuGenerator.dll
+C:\Users\ChiehYunMyBaby\Documents\Visual Studio 2019\Sudoku\Sudoku\SudokuGenerator\bin\Debug\netcoreapp3.1\SudokuGenerator.pdb
+C:\Users\ChiehYunMyBaby\Documents\Visual Studio 2019\Sudoku\Sudoku\SudokuGenerator\obj\Debug\netcoreapp3.1\SudokuGenerator.csproj.AssemblyReference.cache
+C:\Users\ChiehYunMyBaby\Documents\Visual Studio 2019\Sudoku\Sudoku\SudokuGenerator\obj\Debug\netcoreapp3.1\SudokuGenerator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ChiehYunMyBaby\Documents\Visual Studio 2019\Sudoku\Sudoku\SudokuGenerator\obj\Debug\netcoreapp3.1\SudokuGenerator.AssemblyInfoInputs.cache
+C:\Users\ChiehYunMyBaby\Documents\Visual Studio 2019\Sudoku\Sudoku\SudokuGenerator\obj\Debug\netcoreapp3.1\SudokuGenerator.AssemblyInfo.cs
+C:\Users\ChiehYunMyBaby\Documents\Visual Studio 2019\Sudoku\Sudoku\SudokuGenerator\obj\Debug\netcoreapp3.1\SudokuGenerator.csproj.CoreCompileInputs.cache
+C:\Users\ChiehYunMyBaby\Documents\Visual Studio 2019\Sudoku\Sudoku\SudokuGenerator\obj\Debug\netcoreapp3.1\SudokuGenerator.dll
+C:\Users\ChiehYunMyBaby\Documents\Visual Studio 2019\Sudoku\Sudoku\SudokuGenerator\obj\Debug\netcoreapp3.1\SudokuGenerator.pdb
+C:\Users\ChiehYunMyBaby\Documents\Visual Studio 2019\Sudoku\Sudoku\SudokuGenerator\obj\Debug\netcoreapp3.1\SudokuGenerator.genruntimeconfig.cache

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "g3/c7lY9pBVW75WmjViRDchzAqUqg5C1uFBlCBRSqNtSaOQFY5Zl7wvBWr0LUAOajqEhE2NgTEBCEwfmkt/ukQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ChiehYunMyBaby\\Documents\\Visual Studio 2019\\Sudoku\\Sudoku\\SudokuGenerator\\SudokuGenerator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ChiehYunMyBaby\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
+  ],
+  "logs": []
+}
