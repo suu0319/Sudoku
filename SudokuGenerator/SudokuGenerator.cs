@@ -5,11 +5,6 @@ namespace Sudoku
 {
     public class SudokuCommon
     {
-        public Random Random = new Random();
-        public List<int> ValidRowList = new List<int>();
-        public List<int> ValidColList = new List<int>();
-        public List<int[,]> SolutionList = new List<int[,]>();
-
         public static bool IsValid(int num, int row, int col, int[,] sudokuArray)
         {
             int startRow = row / 3 * 3;
@@ -61,18 +56,20 @@ namespace Sudoku
 
     public static class SudokuGenerator
     {
-        private static SudokuCommon _sudokuCommom = new SudokuCommon();
+        private static Random _random = new Random();
+        private static List<int> _validRowList = new List<int>();
+        private static List<int> _validColList = new List<int>();
+        private static List<int[,]> _solutionList = new List<int[,]>();
         public static int[,] SudokuArray = new int[9, 9];
 
         private static bool CanGenerateNumInSudoku(int row, int col)
         {
             if (row == 9)
             {
-                Console.Write("Empty Count:");
+                Console.Write("挖空幾個:");
                 CanRandomResetSudoku(0, int.Parse(Console.ReadLine()), SudokuArray);
-                Console.WriteLine();
                 SudokuCommon.PrintSudoku(SudokuArray);
-                Console.WriteLine("\n0 is empty");
+                Console.WriteLine("\n0代表空值");
                 return true;
             }
 
@@ -90,7 +87,7 @@ namespace Sudoku
 
             while (randomNumList.Count > 0)
             {
-                int randomNum = randomNumList[_sudokuCommom.Random.Next(randomNumList.Count)];
+                int randomNum = randomNumList[_random.Next(randomNumList.Count)];
                 randomNumList.Remove(randomNum);
 
                 if (IsValid(randomNum, row, col))
@@ -111,13 +108,13 @@ namespace Sudoku
 
         private static void FindSudokuSolutions(int validIndex, int[,] sudokuArray)
         {
-            if (validIndex == _sudokuCommom.ValidRowList.Count)
+            if (validIndex == _validRowList.Count)
             {
                 int[,] solution = new int[9, 9];
                 Array.Copy(sudokuArray, solution, 81);
-                _sudokuCommom.SolutionList.Add(solution);
+                _solutionList.Add(solution);
 
-                if (_sudokuCommom.SolutionList.Count > 1)
+                if (_solutionList.Count > 1)
                 {
                     return;
                 }
@@ -125,13 +122,13 @@ namespace Sudoku
                 return;
             }
 
-            int row = _sudokuCommom.ValidRowList[validIndex];
-            int col = _sudokuCommom.ValidColList[validIndex];
+            int row = _validRowList[validIndex];
+            int col = _validColList[validIndex];
             List<int> randomNumList = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
             while (randomNumList.Count > 0)
             {
-                int randomNum = randomNumList[_sudokuCommom.Random.Next(randomNumList.Count)];
+                int randomNum = randomNumList[_random.Next(randomNumList.Count)];
                 randomNumList.Remove(randomNum);
 
                 if (SudokuCommon.IsValid(randomNum, row, col, sudokuArray))
@@ -189,22 +186,22 @@ namespace Sudoku
 
             for (int i = emptyCount; i < targetCount; i++)
             {
-                int randomRow = _sudokuCommom.Random.Next(0, 9);
-                int randomCol = _sudokuCommom.Random.Next(0, 9);
+                int randomRow = _random.Next(0, 9);
+                int randomCol = _random.Next(0, 9);
                 int cacheNum;
 
                 while (sudokuArray[randomRow, randomCol] == 0)
                 {
-                    randomRow = _sudokuCommom.Random.Next(0, 9);
-                    randomCol = _sudokuCommom.Random.Next(0, 9);
+                    randomRow = _random.Next(0, 9);
+                    randomCol = _random.Next(0, 9);
                 }
 
                 cacheNum = sudokuArray[randomRow, randomCol];
                 sudokuArray[randomRow, randomCol] = 0;
-                _sudokuCommom.SolutionList.Clear();
+                _solutionList.Clear();
                 FindSudokuSolutions(0, sudokuArray);
 
-                if (_sudokuCommom.SolutionList.Count == 1)
+                if (_solutionList.Count == 1)
                 {
                     if (CanRandomResetSudoku(emptyCount + 1, targetCount, sudokuArray))
                     {
