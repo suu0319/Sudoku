@@ -67,10 +67,11 @@ namespace Sudoku
         {
             if (row == 9)
             {
-                Console.Write("挖空幾個:");
+                Console.Write("Empty Count:");
                 CanRandomResetSudoku(0, int.Parse(Console.ReadLine()), SudokuArray);
+                Console.WriteLine();
                 SudokuCommon.PrintSudoku(SudokuArray);
-                Console.WriteLine("\n0代表空值");
+                Console.WriteLine("\n0 is empty");
                 return true;
             }
 
