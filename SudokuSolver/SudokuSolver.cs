@@ -5,10 +5,9 @@ namespace Sudoku
 {
     class SudokuSolver
     {
-        private static Random _random = new Random();
         private static List<int> _validRowList = new List<int>();
         private static List<int> _validColList = new List<int>();
-        public static List<int[,]> _solutionList = new List<int[,]>();
+        private static List<int[,]> _solutionList = new List<int[,]>();
 
         private static void FindSudokuSolutions(int validIndex, int[,] sudokuArray)
         {
@@ -26,7 +25,7 @@ namespace Sudoku
 
             while (randomNumList.Count > 0)
             {
-                int randomNum = randomNumList[_random.Next(randomNumList.Count)];
+                int randomNum = randomNumList[SudokuCommon.Random.Next(randomNumList.Count)];
                 randomNumList.Remove(randomNum);
 
                 if (SudokuCommon.IsValid(randomNum, row, col, sudokuArray))
@@ -60,7 +59,7 @@ namespace Sudoku
         static void Main(string[] args)
         {
             SudokuGenerator.InitializeSudoku();
-            Console.WriteLine("\nSolution:\n");
+            Console.WriteLine("\nSolved Result:\n");
             SolveSudoku(SudokuGenerator.SudokuArray);
 
             foreach (var solution in _solutionList)
