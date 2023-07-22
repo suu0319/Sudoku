@@ -7,7 +7,7 @@
 - Data Structure
 - Recursion
 - BackTracking
-## Pictures
+## Examples
 ### SudokuGenerator
 ![image](https://github.com/suu0319/Sudoku/assets/59763965/7c71bfc2-4759-4af2-8405-0c71ca2a9fbb)
 ### SudokuSolver
