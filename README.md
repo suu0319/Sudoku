@@ -1,6 +1,7 @@
 # Sudoku
 ## About
 * 利用回溯法(BackTracking)產生數獨、解算數獨。
+* 放置數字時根據數獨規格判斷，不符合則回溯到上一步，直到達到終止條件即可得出結果。
 * 產生數獨挖空時會利用解算器確保只有**唯一解(empty count < 30的情況)**。
 ## Skills  
 - Data Structure
