@@ -1,8 +1,8 @@
 # Sudoku
-## About
-* 利用回溯法(BackTracking)產生數獨、解算數獨。
-* 放置數字時根據數獨規格判斷，不符合則回溯到上一步，直到達到終止條件即可得出結果。
-* 產生數獨挖空時會利用解算器確保只有**唯一解(empty count < 30的情況)**。
+## Intro
+* Generate and solve Sudoku using the Backtracking algorithm.
+* When placing numbers, the program follows Sudoku rules. If a placement is invalid, it backtracks to the previous step until a valid solution is found.
+* During Sudoku generation, an empty cell count of less than 30 ensures a unique solution by verifying it with the solver.
 
 ## Skills  
 - Data Structure
