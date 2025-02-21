@@ -17,4 +17,4 @@
 ![image](https://github.com/suu0319/Sudoku/assets/59763965/34a6b19e-0929-4863-abf2-9146770c7770)
 
 ## Download  
-[GoogleDrive]([https://drive.google.com/drive/folders/1vb_w1uNGHG7h9doVyB-gjy_ITDJnkQvq?usp=sharing](https://drive.google.com/file/d/12urV3VvapXN9vBBuEePJWUU0XKsEp_lx/view?usp=sharing))
+[GoogleDrive](https://drive.google.com/file/d/12urV3VvapXN9vBBuEePJWUU0XKsEp_lx/view?usp=sharing)
